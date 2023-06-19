@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper
+	namespace="com.example.imple.language.mapper.LanguageMapper">
+	
+	<select id="countAll">
+		select count(*) from country_language
+	</select>
+	
+	<select id="selectAll">
+		select * from country_language
+	</select>
+	
+	<select id="selectPage">
+		select * from country_language
+	</select>
+	
+	<select id="selectByCountryCode">
+		select *
+		  from country_language
+		 where countryCode = upper(#{countryCode})
+	</select>
+	
+	
+	
+	
+	
+</mapper>
